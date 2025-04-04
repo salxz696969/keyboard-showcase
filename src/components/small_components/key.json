@@ -1,0 +1,652 @@
+{
+  "row0": [
+    {
+      "className": "kbc-button kbc-button-danger",
+      "key": "ESCAPE",
+      "firstKey": "Esc",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "F1",
+      "firstKey": "F1",
+      "background": "",
+      "width": "50px",
+      "marginLeft": "70px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "F2",
+      "firstKey": "F2",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "F3",
+      "firstKey": "F3",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "F4",
+      "firstKey": "F4",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "F5",
+      "firstKey": "F5",
+      "background": "",
+      "width": "50px",
+      "marginLeft": "30px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "F6",
+      "firstKey": "F6",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "F7",
+      "firstKey": "F7",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "F8",
+      "firstKey": "F8",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "F9",
+      "firstKey": "F9",
+      "background": "",
+      "width": "50px",
+      "marginLeft": "40px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "F10",
+      "firstKey": "F10",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "F11",
+      "firstKey": "F11",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "F12",
+      "firstKey": "F12",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "PRINTSCREEN",
+      "firstKey": "PrtSc",
+      "background": "",
+      "width": "50px",
+      "marginLeft": "40px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "Scroll Lock",
+      "firstKey": "Scroll Lock",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "Pause",
+      "firstKey": "Pause",
+      "background": "",
+      "width": "50px"
+    }
+  ],
+  "row1": [
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "`",
+      "secondKey": "~",
+      "firstKey": "`",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "1",
+      "secondKey": "!",
+      "firstKey": "1",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "2",
+      "secondKey": "@",
+      "firstKey": "2",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "3",
+      "secondKey": "#",
+      "firstKey": "3",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "4",
+      "secondKey": "$",
+      "firstKey": "4",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "5",
+      "secondKey": "%",
+      "firstKey": "5",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "6",
+      "secondKey": "^",
+      "firstKey": "6",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "7",
+      "secondKey": "&",
+      "firstKey": "7",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "8",
+      "secondKey": "*",
+      "firstKey": "8",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "9",
+      "secondKey": "(",
+      "firstKey": "9",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "0",
+      "secondKey": ")",
+      "firstKey": "0",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "-",
+      "secondKey": "_",
+      "firstKey": "-",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "=",
+      "secondKey": "+",
+      "firstKey": "=",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "BACKSPACE",
+      "firstKey": "Backspace",
+      "background": "",
+      "width": "110px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "Insert",
+      "firstKey": "Insert",
+      "background": "",
+      "width": "50px",
+      "marginLeft": "40px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "Home",
+      "firstKey": "Home",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "PAGEUP",
+      "firstKey": "Page Up",
+      "background": "",
+      "width": "50px"
+    }
+  ],
+  "row2": [
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "TAB",
+      "firstKey": "Tab",
+      "background": "",
+      "width": "80px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "Q",
+      "firstKey": "Q",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "W",
+      "firstKey": "W",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "E",
+      "firstKey": "E",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "R",
+      "firstKey": "R",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "T",
+      "firstKey": "T",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "Y",
+      "firstKey": "Y",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "U",
+      "firstKey": "U",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "I",
+      "firstKey": "I",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "O",
+      "firstKey": "O",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "P",
+      "firstKey": "P",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "[",
+      "secondKey": "{",
+      "firstKey": "[",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "]",
+      "secondKey": "}",
+      "firstKey": "]",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "kdit",
+      "secondKey": "|",
+      "firstKey": "\\",
+      "background": "",
+      "width": "80px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "DELETE",
+      "firstKey": "Delete",
+      "background": "",
+      "width": "50px",
+      "marginLeft": "40px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "End",
+      "firstKey": "End",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "PAGEDOWN",
+      "firstKey": "Page Down",
+      "background": "",
+      "width": "50px"
+    }
+  ],
+  "row3": [
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "CAPSLOCK",
+      "firstKey": "Caps Lock",
+      "background": "",
+      "width": "85px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "A",
+      "firstKey": "A",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "S",
+      "firstKey": "S",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "D",
+      "firstKey": "D",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "F",
+      "firstKey": "F",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "G",
+      "firstKey": "G",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "H",
+      "firstKey": "H",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "J",
+      "firstKey": "J",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "K",
+      "firstKey": "K",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "L",
+      "firstKey": "L",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": ";",
+      "secondKey": ":",
+      "firstKey": ";",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "'",
+      "secondKey": "\"",
+      "firstKey": "'",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "RETURN",
+      "firstKey": "Enter",
+      "background": "",
+      "width": "100px"
+    }
+  ],
+  "row4": [
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "SHIFT",
+      "firstKey": "Shift",
+      "background": "",
+      "width": "130px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "Z",
+      "firstKey": "Z",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "X",
+      "firstKey": "X",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "C",
+      "firstKey": "C",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "V",
+      "firstKey": "V",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "B",
+      "firstKey": "B",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "N",
+      "firstKey": "N",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "M",
+      "firstKey": "M",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": ",",
+      "secondKey": "<",
+      "firstKey": ",",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": ".",
+      "secondKey": ">",
+      "firstKey": ".",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button",
+      "key": "/",
+      "secondKey": "?",
+      "firstKey": "/",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "SHIFT",
+      "firstKey": "Shift",
+      "background": "",
+      "width": "118px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "ARROWUP",
+      "firstKey": "↑",
+      "background": "",
+      "width": "50px",
+      "marginLeft": "100px"
+    }
+  ],
+  "row5": [
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "CONTROL",
+      "firstKey": "Ctrl",
+      "background": "",
+      "width": "70px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "META",
+      "firstKey": "WIN",
+      "background": "",
+      "width": "70px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "ALT",
+      "firstKey": "Alt",
+      "background": "",
+      "width": "70px"
+    },
+    {
+      "className": "kbc-button kbc-button-danger",
+      "key": "SPACE",
+      "firstKey": "",
+      "background": "",
+      "width": "340px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "ALT",
+      "firstKey": "Alt",
+      "background": "",
+      "width": "70px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "FUNCTION",
+      "firstKey": "Fn",
+      "background": "",
+      "width": "70px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "MENU",
+      "firstKey": "Menu",
+      "background": "",
+      "width": "70px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "CONTROL",
+      "firstKey": "Ctrl",
+      "background": "",
+      "width": "70px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "ARROWLEFT",
+      "firstKey": "←",
+      "background": "",
+      "width": "50px",
+      "marginLeft": "40px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "ARROWDOWN",
+      "firstKey": "↓",
+      "background": "",
+      "width": "50px"
+    },
+    {
+      "className": "kbc-button kbc-button-primary",
+      "key": "ARROWRIGHT",
+      "firstKey": "→",
+      "background": "",
+      "width": "50px"
+    }
+  ]
+}
