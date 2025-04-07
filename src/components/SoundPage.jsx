@@ -3,9 +3,13 @@ import allKey from "./small_components/key.json";
 import lyrics from "./small_components/lyrics.json";
 
 function SoundPage() {
-  const [typedWords, setTypedWords] = useState("");
+  const [typedWords, setTypedWords] = useState(
+    ""
+  );
   const inputRef = useRef(null);
-  const [sounds, setSounds] = useState("/audio-2025-03-18-17-07-07_P67qrwI4.m4a");
+  const [sounds, setSounds] = useState(
+    "/src_assets_audio_alpaca_press_GENERIC_R0.mp3"
+  );
   const playAudio = new Audio(sounds);
   const activeKeys = new Set();
 
@@ -100,7 +104,7 @@ function SoundPage() {
     playAudio.play();
   };
 
-  const words = lyrics.lyrics;
+  const [words, setWords] = useState(lyrics.english);
 
   const display = () => {
     return words.split("").map((char, index) => (
@@ -126,55 +130,68 @@ function SoundPage() {
 
   return (
     <div
-      onClick={() => inputRef.current?.focus()}
-      style={{ display: "flex", flexDirection: "column", alignItems: "center", margin:"10px" }}
+      onClick={(e) => {
+        if (e.target.tagName !== "SELECT") {
+          inputRef.current?.focus();
+        }
+      }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        margin: "10px",
+        backgroundColor:"black"
+      }}
     >
-      <div class="dropdown" style={{ alignSelf: "flex-start" }}>
-        <button
-          class="btn btn-secondary dropdown-toggle"
-          type="button"
-          id="dropdownMenuButton2"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Select switch
-        </button>
-        <ul
-          class="dropdown-menu dropdown-menu-dark"
-          aria-labelledby="dropdownMenuButton2"
-        >
-          <li onClick={()=>setSounds("../../public/src_assets_audio_alpaca_press_GENERIC_R0.mp3")}>
-            <a class="dropdown-item active" href="#" >
-              Alpaca
-            </a>
-          </li>
-          <li onClick={()=>setSounds("../../public/src_assets_audio_blackink_press_GENERIC_R0.mp3")}>
-            <a class="dropdown-item" href="#">
-              Gateron Black Inks
-            </a>
-          </li>
-          <li onClick={()=>setSounds("../../public/src_assets_audio_mxblue_press_GENERIC_R0.mp3")}>
-            <a class="dropdown-item" href="#">
-              Mx Blue
-            </a>
-          </li>
-          <li onClick={()=>setSounds("../../public/src_assets_audio_mxbrown_press_GENERIC_R0.mp3")}>
-            <a class="dropdown-item" href="#">
-              Mx Brown
-            </a>
-          </li>
-        </ul>
-      </div>
       <div id="display">{display()}</div>
       <input
         type="text"
         ref={inputRef}
         value={typedWords}
         onKeyDown={handleKeyPress}
+        onKeyUp={handleKeyPress}
         onChange={handleInput}
         style={{ position: "fixed", top: "0px", left: "-9999px" }}
         autoComplete="off"
       />
+      <div style={{display:"flex", gap:"10px"}}>
+        <select
+          style={{width:"200px"}}
+          class="form-select form-select-sm"
+          aria-label=".form-select-sm example"
+          onChange={(e) => setSounds(e.target.value)}
+        >
+          <option value="../../public/src_assets_audio_alpaca_press_GENERIC_R0.mp3">
+            Alpaca
+          </option>
+          <option value="../../public/src_assets_audio_blackink_press_GENERIC_R0.mp3">
+            Blacklink
+          </option>
+          <option value="../../public/src_assets_audio_mxblue_press_GENERIC_R0.mp3">
+            Mx Blue
+          </option>
+          <option value="../../public/src_assets_audio_mxbrown_press_GENERIC_R0.mp3">
+            Mx Brown
+          </option>
+        </select>
+
+        <select
+        style={{width:"200px"}}
+        class="form-select form-select-sm"
+        aria-label=".form-select-sm example"
+        onChange={(e) => setWords(e.target.value)}
+      >
+        <option value={lyrics.english}>
+          English
+        </option>
+        <option value={lyrics.japanese}>
+          日本語
+        </option>
+        <option value={lyrics.khmer}>
+          ភាសាខ្មែរ
+        </option>
+      </select>
+      </div>
 
       <div style={{ transform: "scale(0.80)" }}>
         <div
