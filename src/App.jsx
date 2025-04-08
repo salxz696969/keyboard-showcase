@@ -1,51 +1,44 @@
-import SoundPage from "./components/SoundPage.jsx";
-import HomePage from "./components/HomePage";
-import { Link, Route, Router } from "react-router-dom";
-import ExplorePage from "./components/ExplorePage";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
-import KeyboardViewPage from "./components/KeyboardViewPage";
-import CartPage from "./components/CartPage";
+import './App.css';
+import './index.css';
+import LandingPage from "./components/LandingPage.jsx";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Lenis from "@studio-freight/lenis";
+import Keyboard3D from "./components/Keyboard3D.jsx";
 
 function App() {
-  return (
-    <>
-      <CartPage
-        keyboardDetail={[
-          {
-            picture:"/public/pngwing.com (4) - Copy.png",
-            price:99.99,
-            name:"Kim Chaewon",
-            quantity:2
-          },
-          {
-            picture:"/public/pngwing.com (4) - Copy.png",
-            price:99.99,
-            name:"Kim Chaewon",
-            quantity:2
-          },
-          {
-            picture:"/public/pngwing.com (4) - Copy.png",
-            price:99.99,
-            name:"Kim Chaewon",
-            quantity:3
-          },
-          {
-            picture:"/public/pngwing.com (4) - Copy.png",
-            price:99.99,
-            name:"Kim Chaewon",
-            quantity:5
-          },
-          {
-            picture:"/public/pngwing.com (4) - Copy.png",
-            price:99.99,
-            name:"Kim Chaewon",
-            quantity:9
-          }
-        ]}
-      />
-    </>
-  );
+    useEffect(() => {
+        // AOS init
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+
+        // Lenis init
+        const lenis = new Lenis({
+            smooth: true,
+            lerp: 0.08, // smoothing factor
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        return () => {
+            lenis.destroy();
+        };
+    }, []);
+
+    return (
+        <div data-lenis>
+            <LandingPage />
+            <Keyboard3D />
+        </div>
+    );
 }
 
-export default App;
+export default App
