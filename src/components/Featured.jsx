@@ -3,10 +3,10 @@ import Spec from "./small_components/Spec.jsx";
 export default function Featured({ isPicOnLeft, imagePath, name, description, specs, backgroundColor }) {
     return (
         <div
-            className="featured flex justify-center items-center md:h-[50vh] pb-[80px]"
+            className="featured flex justify-center items-center p-2.5"
             style={{ backgroundColor: backgroundColor }}
         >
-            <div className="featured-wrapper w-[90vw] lg:w-[1024px] flex flex-col md:flex-row justify-between items-center p-2.5" data-aos="fade-up">
+            <div className="featured-wrapper h-full w-[90vw] lg:w-[1024px] flex flex-col md:flex-row justify-between items-center md:p-2.5 pb-[100px]" data-aos="fade-up">
                 {isPicOnLeft ? (
                     <>
                         <img src={imagePath} className="w-full h-1/2 md:w-1/2 md:h-auto" alt="" />
