@@ -46,7 +46,7 @@ export default function LandingPage() {
     ]
     return (
         <>
-            <div className="hero w-dvw h-[90vh] bg-[#0e0e0e] flex justify-between items-center">
+            <div className="hero w-dvw h-[100vh] bg-[#0e0e0e] flex justify-between items-center">
                 <KeyboardCarousel isAtRight={false} images={heroImages}></KeyboardCarousel>
                 <div className="hero-text w-1/2 flex flex-col gap-4 justify-center items-center" data-aos="fade-up">
                     <p className="text-[#893331] text-4xl">KeebsForKeebs</p>
