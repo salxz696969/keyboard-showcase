@@ -6,6 +6,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Lenis from "@studio-freight/lenis";
 import Keyboard3D from "./components/Keyboard3D.jsx";
+import { Link, Routes, Route } from 'react-router-dom';
+import PurchasePage from './components/PurchasePage.jsx';
+import SoundPage from './components/SoundPage';
 
 function App() {
     useEffect(() => {
@@ -35,10 +38,20 @@ function App() {
 
     return (
         <div data-lenis>
-            <LandingPage />
-            <Keyboard3D />
+            <nav>
+                <div>
+                    <Link to="/">Home</Link>
+                    <Link to="/purchase">Purchase</Link>
+                </div>
+                <Link to="/sound">Sound</Link>
+            </nav>
+            <Routes>
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/purchase" element={<PurchasePage/>} />
+                <Route path="/sound" element={<SoundPage/>} />
+            </Routes>
         </div>
     );
 }
 
-export default App
+export default App;
