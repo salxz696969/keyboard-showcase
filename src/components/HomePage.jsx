@@ -1,4 +1,4 @@
-import PurchaseCard from "./small_components/PurchaseChard";
+import PurchaseCard from "./small_components/PurchaseCard";
 
 const HomePage = () => {
   const keyboardImg = "../../public/pngwing.com (4).png";
