@@ -1,16 +1,35 @@
 import "./App.css";
 import "./index.css";
-import LandingPage from "./components/LandingPage.jsx";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Link, Routes, Route } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Lenis from "@studio-freight/lenis";
-import Keyboard3D from "./components/Keyboard3D.jsx";
-import { Link, Routes, Route } from "react-router-dom";
+
+import LandingPage from "./components/LandingPage.jsx";
 import PurchasePage from "./components/PurchasePage.jsx";
 import SoundPage from "./components/SoundPage";
+import Keyboard3D from "./components/Keyboard3D.jsx";
+import KeyboardViewPage from "./components/KeyboardViewPage.jsx";
 
 function App() {
+  const [isScrollingUp, setIsScrollingUp] = useState(true);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsScrollingUp(currentScrollY < lastScrollY);
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   useEffect(() => {
     // AOS init
     AOS.init({
@@ -21,7 +40,7 @@ function App() {
     // Lenis init
     const lenis = new Lenis({
       smooth: true,
-      lerp: 0.08, // smoothing factor
+      lerp: 0.08,
     });
 
     function raf(time) {
@@ -36,38 +55,50 @@ function App() {
     };
   }, []);
 
-return (
+  return (
     <div data-lenis>
-        <nav
-            style={{
-                backgroundColor: "#D9D9D9",
-                position: "sticky",
-                zIndex: 1000, // Ensure it stays on top of other elements
-                display: "flex",
-                width: "30vw",
-                top: "10px",
-                left: "50%",
-                transform: "translateX(-50%)",
-                justifyContent: "space-between",
-                padding: "10px",
-                borderRadius: "10px",
-            }}
+      <nav
+        style={{
+          backgroundColor: "#D9D9D9",
+          position: "fixed",
+          zIndex: 1000,
+          display: "flex",
+          width: "30vw",
+          top: isScrollingUp ? "10px" : "-100px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          justifyContent: "space-between",
+          padding: "10px",
+          borderRadius: "10px",
+          transition: "top 0.3s ease-in-out",
+        }}
+      >
+        <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
+          <Link to="/">Home</Link>
+          <Link to="/purchase">Purchase</Link>
+        </div>
+        <div
+          style={{
+            backgroundColor: "#893331",
+            padding: "5px",
+            borderRadius: "5px",
+            color: "white",
+          }}
         >
-            <div style={{ display: "flex", justifyContent: "space-between", width: "40%", alignItems: "center" }}>
-                <Link to="/">Home</Link>
-                <Link to="/purchase">Purchase</Link>
-            </div>
-            <div style={{ backgroundColor: "#893331", padding: "5px", borderRadius: "5px", color: "white" }}>
-                <Link to="/sound">Sound</Link>
-            </div>
-        </nav>
-        <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/purchase" element={<PurchasePage />} />
-            <Route path="/sound" element={<SoundPage />} />
-        </Routes>
+          <Link to="/sound" style={{ color: "white", textDecoration: "none" }}>
+            Sound
+          </Link>
+        </div>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/purchase" element={<PurchasePage />} />
+        <Route path="/sound" element={<SoundPage />} />
+        <Route path="/keyboardView" element={<KeyboardViewPage/>}/>
+      </Routes>
     </div>
-);
+  );
 }
 
 export default App;
