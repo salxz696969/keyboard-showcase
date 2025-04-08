@@ -60,7 +60,7 @@ return (
           >
             <img src={e.picture} alt="" style={{ width: "25%" }} />
             <div>{e.name}</div>
-            <div>{e.price}</div>
+            <div>{`${e.price}$`}</div>
             <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
               <button
                 style={{
@@ -122,7 +122,7 @@ return (
             style={{ width: "100px" , objectFit:"contain"}}
           />
         </div>
-        <h1 style={{marginTop:"100px"}}>{`Total ${calculateTotal().toFixed(2)}`}</h1>
+        <h1 style={{marginTop:"100px"}}>{`Total ${calculateTotal().toFixed(2)}$`}</h1>
       </div>
     </div>
   );
