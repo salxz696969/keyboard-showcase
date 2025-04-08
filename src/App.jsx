@@ -6,7 +6,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Lenis from "@studio-freight/lenis";
 import Keyboard3D from "./components/Keyboard3D.jsx";
-import SoundPage from "./components/SoundPage.jsx";
 
 function App() {
     useEffect(() => {
@@ -38,9 +37,8 @@ function App() {
         <div data-lenis>
             <LandingPage />
             <Keyboard3D />
-            {/*<SoundPage/>*/}
         </div>
     );
 }
 
-export default App;
+export default App
