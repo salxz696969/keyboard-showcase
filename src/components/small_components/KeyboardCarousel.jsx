@@ -34,7 +34,7 @@ export default function KeyboardCarousel({ images, isAtRight }) {
     }, [images.length, isAtRight]);
 
     return (
-        <div className={`carousel-wrapper w-1/4 h-full flex ${isAtRight ? "justify-end" : "justify-start"} items-center overflow-hidden`} data-aos={isAtRight ? "fade-right" : "fade-left"}>
+        <div className={`carousel-wrapper hidden md:w-1/4 md:h-full md:flex ${isAtRight ? "md:justify-end" : "md:justify-start"} md:items-center md:overflow-hidden `} data-aos={isAtRight ? "fade-right" : "fade-left"}>
             <img
                 src={images[imageIndex]}
                 alt={`Keyboard ${imageIndex + 1}`}

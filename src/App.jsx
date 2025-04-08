@@ -1,12 +1,12 @@
 import './App.css';
 import './index.css';
-import KeyboardCarousel from "./components/small_components/KeyboardCarousel.jsx";
 import LandingPage from "./components/LandingPage.jsx";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Lenis from "@studio-freight/lenis";
 import Keyboard3D from "./components/Keyboard3D.jsx";
+import SoundPage from "./components/SoundPage.jsx";
 
 function App() {
     useEffect(() => {
@@ -38,6 +38,7 @@ function App() {
         <div data-lenis>
             <LandingPage />
             <Keyboard3D />
+            {/*<SoundPage/>*/}
         </div>
     );
 }

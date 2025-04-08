@@ -46,11 +46,11 @@ export default function LandingPage() {
     ]
     return (
         <>
-            <div className="hero w-dvw h-[100vh] bg-[#0e0e0e] flex justify-between items-center">
+            <div className="hero w-dvw h-[100vh] bg-[#0e0e0e] flex justify-center md:justify-between items-center">
                 <KeyboardCarousel isAtRight={false} images={heroImages}></KeyboardCarousel>
-                <div className="hero-text w-1/2 flex flex-col gap-4 justify-center items-center" data-aos="fade-up">
+                <div className="hero-text w-full md:w-1/2 flex flex-col gap-4 justify-center items-center" data-aos="fade-up">
                     <p className="text-[#893331] text-4xl">KeebsForKeebs</p>
-                    <p className="text-white text-xl">Explore Keyboards. Feel the Click. Hear the Sound.</p>
+                    <p className="text-white text-xl text-center">"Explore Keyboards. Feel the Click. Hear the Sound."</p>
                     <div className="hero-buttons flex gap-2 mt-8">
                         <a href="" className="py-2 px-3.5  bg-white text-black">Purchase</a>
                         <a href="" className="py-2 px-3.5  bg-white text-black">Sound Test</a>
@@ -71,8 +71,8 @@ export default function LandingPage() {
                     />
                 ))
             }
-            <div className="more-section bg-[#0e0e0e] flex flex-col justify-center items-center h-[60vh]">
-                <div className="more-section-wrapper lg:w-[1024px]">
+            <div className="more-section bg-[#0e0e0e] flex flex-col justify-center items-center md:h-[60vh]">
+                <div className="more-section-wrapper w-full lg:w-[1024px]">
                     <Trending></Trending>
                 </div>
                 <a className="explore-more-btn bg-white p-2.5 flex text-black cursor-pointer gap-2.5 items-center mt-[100px]">
