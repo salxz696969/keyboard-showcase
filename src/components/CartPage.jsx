@@ -122,7 +122,7 @@ return (
             style={{ width: "100px" , objectFit:"contain"}}
           />
         </div>
-        <h1 style={{marginTop:"100px"}}>{`Total ${calculateTotal()}`}</h1>
+        <h1 style={{marginTop:"100px"}}>{`Total ${calculateTotal().toFixed(2)}`}</h1>
       </div>
     </div>
   );
