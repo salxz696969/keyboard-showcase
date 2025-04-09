@@ -14,7 +14,7 @@ const PurchasePage = () => {
         flexDirection: "column",
       }}
     >
-        <Link to="/Cart" state={keyboardDetail}>🛒</Link>
+        <Link to="/Cart" state={keyboardDetail} style={{position:"absolute", right:"10px", fontSize:'2rem'}}>🛒</Link>
       <img
         src="https://albashkh.com/cdn/shop/collections/akko-logo-w.png?v=1717283579"
         alt=""

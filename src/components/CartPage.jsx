@@ -80,6 +80,8 @@ return (
                   border: "none",
                   justifyContent: "center",
                   borderRadius: "100%",
+                  backgroundColor:"white",
+                  color:"black"
                 }}
                 onClick={() => handleClickMinus(i)}
               >
@@ -95,6 +97,8 @@ return (
                   border: "none",
                   justifyContent: "center",
                   borderRadius: "100%",
+                  backgroundColor:"white",
+                  color:"black"
                 }}
                 onClick={() => handleClickPlus(i)}
               >
