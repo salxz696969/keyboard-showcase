@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const CartPage = ({ keyboardDetail }) => {
-  let getQuantity = [];
-  for (let i = 0; i < keyboardDetail.length; i++) {
-    getQuantity.push(keyboardDetail[i].quantity);
-  }
-  const [counter, setCounter] = useState(getQuantity);
+const CartPage = () => {
+  const [keyboardDetail, setKeyboardDetail] = useState([]);
+
+  useEffect(() => {
+    const cartData = localStorage.getItem("cart");
+    if (cartData) {
+      setKeyboardDetail(JSON.parse(cartData));
+    }
+  }, []);
+  const [counter, setCounter] = useState([1,1,1]);
   const handleClickPlus = (index) => {
     const temp = [...counter];
     temp[index]++;
@@ -24,6 +28,11 @@ const CartPage = ({ keyboardDetail }) => {
         total+=keyboardDetail[i].price*counter[i];
     }
     return total
+  }
+  if(!keyboardDetail){
+    return(
+      <p>No data has been passed in</p>
+    )
   }
 return (
     <div

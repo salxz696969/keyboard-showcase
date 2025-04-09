@@ -54,7 +54,7 @@ export default function LandingPage() {
                     <p className="text-white text-xl text-center">"Explore Keyboards. Feel the Click. Hear the Sound."</p>
                     <div className="hero-buttons flex gap-2 mt-8">
                         <Link to="/purchase" className="py-2 px-3.5  bg-white text-black">Purchase</Link>
-                        <a href="" className="py-2 px-3.5  bg-white text-black">Sound Test</a>
+                        <Link to="/sound" className="py-2 px-3.5  bg-white text-black">Sound Test</Link>
                     </div>
                 </div>
                 <KeyboardCarousel isAtRight={true} images={heroImages}></KeyboardCarousel>

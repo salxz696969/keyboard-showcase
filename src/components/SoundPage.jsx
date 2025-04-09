@@ -3,9 +3,7 @@ import allKey from "./small_components/key.json";
 import lyrics from "./small_components/lyrics.json";
 
 function SoundPage() {
-  const [typedWords, setTypedWords] = useState(
-    ""
-  );
+  const [typedWords, setTypedWords] = useState("");
   const inputRef = useRef(null);
   const [sounds, setSounds] = useState(
     "/src_assets_audio_alpaca_press_GENERIC_R0.mp3"
@@ -139,11 +137,13 @@ function SoundPage() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        margin: "10px",
-        backgroundColor:"black"
+        backgroundColor: "black",
+        minHeight: "100vh",
       }}
     >
-      <div id="display">{display()}</div>
+      <div style={{ marginTop: "75px" }} id="display">
+        {display()}
+      </div>
       <input
         type="text"
         ref={inputRef}
@@ -154,11 +154,16 @@ function SoundPage() {
         style={{ position: "fixed", top: "0px", left: "-9999px" }}
         autoComplete="off"
       />
-      <div style={{display:"flex", gap:"10px"}}>
+      <div style={{ display: "flex", gap: "10px" }}>
         <select
-          style={{width:"200px"}}
-          class="form-select form-select-sm"
-          aria-label=".form-select-sm example"
+          style={{
+            width: "200px",
+            padding: "5px",
+            margin: "10px 0",
+            borderRadius: "5px",
+            border: "1px solid #ccc",
+            backgroundColor:"white"
+          }}
           onChange={(e) => setSounds(e.target.value)}
         >
           <option value="../../public/src_assets_audio_alpaca_press_GENERIC_R0.mp3">
@@ -176,21 +181,20 @@ function SoundPage() {
         </select>
 
         <select
-        style={{width:"200px"}}
-        class="form-select form-select-sm"
-        aria-label=".form-select-sm example"
-        onChange={(e) => setWords(e.target.value)}
-      >
-        <option value={lyrics.english}>
-          English
-        </option>
-        <option value={lyrics.japanese}>
-          日本語
-        </option>
-        <option value={lyrics.khmer}>
-          ភាសាខ្មែរ
-        </option>
-      </select>
+          style={{
+            width: "200px",
+            padding: "5px",
+            margin: "10px 0",
+            borderRadius: "5px",
+            border: "1px solid #ccc",
+            backgroundColor:"white"
+          }}
+          onChange={(e) => setWords(e.target.value)}
+        >
+          <option value={lyrics.english}>English</option>
+          <option value={lyrics.japanese}>日本語</option>
+          <option value={lyrics.khmer}>ភាសាខ្មែរ</option>
+        </select>
       </div>
 
       <div style={{ transform: "scale(0.80)" }}>

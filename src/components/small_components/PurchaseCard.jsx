@@ -1,8 +1,20 @@
 import { Link } from "react-router-dom";
 
-const PurchaseCard = ({ image, title, price }) => {
+const PurchaseCard = ({ image, title, price, description }) => {
+  const dataToSend={
+    picture:{
+      picture1:image,
+      picture2:image,
+      picture3:image
+    },
+    titleAndPrice:{
+      title:title,
+      price:price
+    },
+    description:description
+  }
   return (
-    <Link to="/keyboardView" state={{ image, title, price }}
+    <Link to="/keyboardView" state={dataToSend} 
       style={{
         width: "150px",
         display: "flex",

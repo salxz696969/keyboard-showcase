@@ -5,15 +5,22 @@ import { Link, Routes, Route } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Lenis from "@studio-freight/lenis";
-
 import LandingPage from "./components/LandingPage.jsx";
 import PurchasePage from "./components/PurchasePage.jsx";
 import SoundPage from "./components/SoundPage";
 import Keyboard3D from "./components/Keyboard3D.jsx";
 import KeyboardViewPage from "./components/KeyboardViewPage.jsx";
+import CartPage from './components/CartPage';
 
 function App() {
   const [isScrollingUp, setIsScrollingUp] = useState(true);
+
+  useEffect(()=>{
+    const cart=localStorage.getItem("cart");
+    if(!cart){
+      localStorage.setItem("cart", JSON.stringify([]));
+    }
+  },[])
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -96,6 +103,8 @@ function App() {
         <Route path="/purchase" element={<PurchasePage />} />
         <Route path="/sound" element={<SoundPage />} />
         <Route path="/keyboardView" element={<KeyboardViewPage/>}/>
+        <Route path="/3D" element={<Keyboard3D/>}/>
+        <Route path="/Cart" element={<CartPage/>}/>
       </Routes>
     </div>
   );
