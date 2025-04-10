@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 const PurchaseCard = ({ image, title, price, description }) => {
   const dataToSend={
     picture:{
-      picture1:image,
-      picture2:image,
-      picture3:image
+      picture1:image.picture1,
+      picture2:image.picture2,
+      picture3:image.picture3
     },
     titleAndPrice:{
       title:title,

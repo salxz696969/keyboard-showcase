@@ -9,7 +9,7 @@ const CartPage = () => {
       setKeyboardDetail(JSON.parse(cartData));
     }
   }, []);
-  const [counter, setCounter] = useState([1,1,1]);
+  const [counter, setCounter] = useState([1, 1, 1]);
   const handleClickPlus = (index) => {
     const temp = [...counter];
     temp[index]++;
@@ -22,21 +22,19 @@ const CartPage = () => {
     temp[index]--;
     setCounter(temp);
   };
-  const calculateTotal=()=>{
-    let total=0;
-    for(let i=0;i<keyboardDetail.length;i++){
-        total+=keyboardDetail[i].price*counter[i];
+  const calculateTotal = () => {
+    let total = 0;
+    for (let i = 0; i < keyboardDetail.length; i++) {
+      total += keyboardDetail[i].price * counter[i];
     }
-    return total
+    return total;
+  };
+  if (!keyboardDetail) {
+    return <p>No data has been passed in</p>;
   }
-  if(!keyboardDetail){
-    return(
-      <p>No data has been passed in</p>
-    )
-  }
-return (
+  return (
     <div
-        style={{
+      style={{
         display: "flex",
         backgroundColor: "black",
         minHeight: "100vh",
@@ -80,8 +78,8 @@ return (
                   border: "none",
                   justifyContent: "center",
                   borderRadius: "100%",
-                  backgroundColor:"white",
-                  color:"black"
+                  backgroundColor: "white",
+                  color: "black",
                 }}
                 onClick={() => handleClickMinus(i)}
               >
@@ -97,8 +95,8 @@ return (
                   border: "none",
                   justifyContent: "center",
                   borderRadius: "100%",
-                  backgroundColor:"white",
-                  color:"black"
+                  backgroundColor: "white",
+                  color: "black",
                 }}
                 onClick={() => handleClickPlus(i)}
               >
@@ -118,24 +116,27 @@ return (
         }}
       >
         <h2>Choose Payment Method</h2>
-        <div style={{ display: "flex", gap:"10px" }}>
+        <div style={{ display: "flex", gap: "10px" }}>
           <img
             src="/public/khqr-5.png"
             alt=""
-            style={{ width: "100px", objectFit:"contain" }}
+            style={{ width: "100px", objectFit: "contain" }}
           />
           <img
             src="/public/master-card-logo-png_seeklogo-89117.png"
             alt=""
-            style={{ width: "100px", objectFit:"contain" }}
+            style={{ width: "100px", objectFit: "contain" }}
           />
           <img
             src="/public/visa-logo-png_seeklogo-149684.png"
             alt=""
-            style={{ width: "100px" , objectFit:"contain"}}
+            style={{ width: "100px", objectFit: "contain" }}
           />
         </div>
-        <h1 style={{marginTop:"100px"}}>{`Total ${calculateTotal().toFixed(2)}$`}</h1>
+        <h1 style={{ marginTop: "100px" }}>{`Total ${calculateTotal().toFixed(
+          2
+        )}$`}</h1>
+        <button style={{backgroundColor:"white", color:"black", borderRadius:"5px", width:"100px", marginTop:"50px"}} onClick={()=>localStorage.clear()}>Purhcase</button>
       </div>
     </div>
   );
