@@ -33,7 +33,11 @@ const PurchasePage = () => {
         {keyboardList.Akko.map((e, i) => {
           return (
             <PurchaseCard
-              image={e.picture}
+              image={{
+                picture1:e.picture1,
+                picture2:e.picture2,
+                picture3:e.picture3
+              }}
               price={e.price}
               title={e.name}
               description={e.description}
@@ -66,7 +70,11 @@ const PurchasePage = () => {
           return (
             <PurchaseCard
               description={e.description}
-              image={e.picture}
+              image={{
+                picture1:e.picture1,
+                picture2:e.picture2,
+                picture3:e.picture3
+              }}
               price={e.price}
               title={e.name}
               key={i}
@@ -93,7 +101,11 @@ const PurchasePage = () => {
           return (
             <PurchaseCard
               description={e.description}
-              image={e.picture}
+              image={{
+                picture1:e.picture1,
+                picture2:e.picture2,
+                picture3:e.picture3
+              }}
               price={e.price}
               title={e.name}
               key={i}
