@@ -9,49 +9,45 @@ export default function LandingPage() {
     const heroImages = ["/images/key1.png", "/images/key2.png", "/images/key3.png"];
     const featured = [
         {
-            name: "Keyboard 1",
-            desc: "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.",
-            image: "/images/key1.png",
+            name: "Akko MU02 Mountain Seclusion",
+            desc: "A 75% mechanical keyboard featuring a walnut wooden case, gasket mount structure, and MOA profile PBT dye-sublimated keycaps. It offers multi-mode connectivity, including Bluetooth 5.0, 2.4GHz wireless, and USB Type-C, providing versatility for both work and play.",
+            image: "https://akkogear.eu/cdn/shop/files/Akko-MU02-Mountain-Seclusion.png?v=1727681953",
             specs: [
-                {image: "/images/spec.svg", name: "Key 1"},
-                {image: "/images/spec.svg", name: "Key 2"},
-                {image: "/images/spec.svg", name: "Key 3"},
-                {image: "/images/spec.svg", name: "Key 4"},
-                {image: "/images/spec.svg", name: "Key 5"},
+                {image: "assets/images/blue-switch.png", name: "Clicky Switch"},
+                {image: "assets/images/wired.png", name: "Wired"},
+                {image: "assets/images/bluetooth.png", name: "Bluetooth"},
+                {image: "assets/images/wireless.png", name: "Wireless"},
             ]
         },
         {
-            name: "Keyboard 1",
-            desc: "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.",
-            image: "/images/key1.png",
+            name: "Keychron Q1",
+            desc: "A customizable 75% mechanical keyboard with an aluminum chassis, offering both wired and wireless connectivity options. It features hot-swappable switches, PBT keycaps, and supports VIA software for easy customization, making it a versatile choice for various typing preferences.",
+            image: "https://www.keychron.com/cdn/shop/files/q1_3f9eee4b-bd19-4e3c-99ef-8667d3e55eaa.png?v=15023799825292887673",
             specs: [
-                {image: "/images/spec.svg", name: "Key 1"},
-                {image: "/images/spec.svg", name: "Key 2"},
-                {image: "/images/spec.svg", name: "Key 3"},
-                {image: "/images/spec.svg", name: "Key 4"},
-                {image: "/images/spec.svg", name: "Key 5"},
+                {image: "assets/images/red-switch.png", name: "Linear Switch"},
+                {image: "assets/images/bluetooth.png", name: "Bluetooth"},
+                {image: "assets/images/wired.png", name: "Wired"},
             ]
         },
         {
-            name: "Keyboard 1",
-            desc: "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.",
-            image: "/images/key1.png",
+            name: "Akko Black SP 3087v2",
+            desc: "A compact mechanical keyboard featuring a black and silver color scheme, designed for a sleek and modern look. It offers a satisfying typing experience with its tactile switches and durable construction, suitable for both typing and gaming.",
+            image: "https://akkogear.eu/cdn/shop/files/Akko-Black-SP-3087v2-1.png?v=1695370410",
             specs: [
-                {image: "/images/spec.svg", name: "Key 1"},
-                {image: "/images/spec.svg", name: "Key 2"},
-                {image: "/images/spec.svg", name: "Key 3"},
-                {image: "/images/spec.svg", name: "Key 4"},
-                {image: "/images/spec.svg", name: "Key 5"},
+                {image: "assets/images/brown-switch.png", name: "Tactile Switch"},
+                {image: "assets/images/wired.png", name: "Wired"},
             ]
         }
-    ]
+    ];
     return (
         <>
             <div className="hero w-dvw h-[100vh] bg-[#0e0e0e] flex justify-center md:justify-between items-center">
                 <KeyboardCarousel isAtRight={false} images={heroImages}></KeyboardCarousel>
-                <div className="hero-text w-full md:w-1/2 flex flex-col gap-4 justify-center items-center" data-aos="fade-up">
+                <div className="hero-text w-full md:w-1/2 flex flex-col gap-4 justify-center items-center"
+                     data-aos="fade-up">
                     <p className="text-[#893331] text-4xl">KeebsForKeebs</p>
-                    <p className="text-white text-xl text-center">"Explore Keyboards. Feel the Click. Hear the Sound."</p>
+                    <p className="text-white text-xl text-center">"Explore Keyboards. Feel the Click. Hear the
+                        Sound."</p>
                     <div className="hero-buttons flex gap-2 mt-8">
                         <Link to="/purchase" className="py-2 px-3.5  bg-white text-black">Purchase</Link>
                         <Link to="/sound" className="py-2 px-3.5  bg-white text-black">Sound Test</Link>
@@ -72,7 +68,7 @@ export default function LandingPage() {
                     />
                 ))
             }
-            <div className="more-section bg-[#0e0e0e] flex flex-col justify-center items-center md:h-[60vh]">
+            <div className="more-section bg-[#0e0e0e] flex flex-col justify-center items-center md:h-min-[60vh]">
                 <div className="more-section-wrapper w-full lg:w-[1024px]">
                     <Trending></Trending>
                 </div>
@@ -80,11 +76,7 @@ export default function LandingPage() {
                     <p>Explore More</p>
                     <img src="/images/arrow.png" alt="" className="w-[20px] h-[20px] "/>
                 </a>
-
             </div>
-            {/*trending section*/}
-
-
         </>
     )
 }
