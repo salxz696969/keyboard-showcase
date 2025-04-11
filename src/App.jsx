@@ -35,7 +35,7 @@ function App() {
 
     return (
         <div data-lenis>
-            <LandingPage />
+            {/*<LandingPage />*/}
             <Keyboard3D />
         </div>
     );
