@@ -137,7 +137,7 @@ function SoundPage() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        backgroundColor: "black",
+        backgroundColor: "#0e0e0e",
         minHeight: "100vh",
       }}
     >
