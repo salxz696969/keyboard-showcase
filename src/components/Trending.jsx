@@ -4,30 +4,30 @@ import TrendingCard from "./small_components/TrendingCard.jsx";
 export default function Trending() {
     const test = [
         {
-            name: "AULA-K001",
-            desc: "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.",
-            image: "/images/key1.png"
+            name: "Sailor Moon Crystal 5087B Plus",
+            desc: "A Sailor Moon-themed mechanical keyboard featuring vibrant RGB lighting and a compact design.",
+            image: "https://akkogear.eu/cdn/shop/files/SailorMoonCrystal5087BPlus.png?v=1700565857&width=2000"
         },
         {
-            name: "Logitech G413",
-            desc: "Sleek design and Romer-G switches for precision typing.",
-            image: "/images/key1.png"
+            name: "Redragon K556 TKL RGB",
+            desc: "A tenkeyless mechanical gaming keyboard with RGB backlighting and durable construction.",
+            image: "https://www.redragonzone.com/cdn/shop/files/Redragon_K556_TKL_RGB_Wired_Mechanical_Gaming_Keyboard_6_300x300.png?v=1706770169"
         },
         {
-            name: "Corsair K95",
-            desc: "RGB mechanical keyboard with macro keys and premium build.",
-            image: "/images/key1.png"
+            name: "Akko Black SP 3087v2",
+            desc: "A 3087v2 mechanical keyboard featuring black switches and a sleek design.",
+            image: "https://akkogear.eu/cdn/shop/files/Akko-Black-SP-3087v2-1.png?v=1695370410"
         },
         {
-            name: "SteelSeries Apex Pro",
-            desc: "Adjustable mechanical switches and OLED smart display.",
-            image: "/images/key1.png"
+            name: "Akko MU02 Mountain Seclusion",
+            desc: "A 75% mechanical keyboard featuring a walnut wooden case, gasket mount structure, and MOA profile PBT dye-sublimated keycaps.",
+            image: "https://akkogear.eu/cdn/shop/files/Akko-MU02-Mountain-Seclusion.png?v=1727681953"
         },
         {
-            name: "Razer Huntsman Mini",
-            desc: "60% layout with optical switches for ultra-fast response.",
-            image: "/images/key1.png"
-        },
+            name: "Akko 3061S HE Shine-Through Mechanical Keyboard",
+            desc: "A 60% compact mechanical keyboard featuring magnetic switches, RGB backlighting, and high polling rate for enhanced performance.",
+            image: "https://akkogear.de/cdn/shop/files/Akko-3061S-HE-Shine-Through-1.png?v=1718950199"
+        }
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -41,7 +41,7 @@ export default function Trending() {
     }, [test.length]);
 
     return (
-        <div className="w-full mx-auto overflow-hidden" data-aos="fade-up">
+        <div className="w-full h-full mx-auto overflow-hidden" data-aos="fade-up">
             <h1 className="text-4xl text-white text-center mb-[100px] mt-[100px]">Trending</h1>
             <div className="relative w-full overflow-hidden">
                 <div
