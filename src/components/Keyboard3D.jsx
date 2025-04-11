@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
+import { Link } from "react-router-dom";
 
 // Responsive Keyboard component
 function Keyboard() {
@@ -49,6 +50,9 @@ function Keyboard3D() {
                 <img src="/images/close.png" alt="close" className="w-[40px] sm:w-[50px]" />
             </a>
 
+            <Link to="/" className="absolute top-4 left-4 z-10">
+                <img src="/images/close.png" alt="close" className="w-[40px] sm:w-[50px]" />
+            </Link>
             <Canvas
                 className="w-full h-full"
                 style={{ backgroundColor: "transparent" }}

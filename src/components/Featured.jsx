@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Spec from "./small_components/Spec.jsx";
 
 export default function Featured({ isPicOnLeft, imagePath, name, description, specs, backgroundColor }) {
@@ -19,12 +20,12 @@ export default function Featured({ isPicOnLeft, imagePath, name, description, sp
                             </div>
                             <p className="text-l text-white">{description}</p>
                             <div className="button-wrapper flex gap-2.5 mt-8">
-                                <a href="" className="py-2 px-3.5 bg-white text-black">
+                                <Link to="/sound" className="py-2 px-3.5 bg-white text-black">
                                     Sound Test
-                                </a>
-                                <a href="" className="py-2 px-3.5 bg-white text-black">
+                                </Link>
+                                <Link to="/3D" className="py-2 px-3.5 bg-white text-black">
                                     View In 3D
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </>
@@ -39,12 +40,12 @@ export default function Featured({ isPicOnLeft, imagePath, name, description, sp
                             </div>
                             <p className="text-l text-white">{description}</p>
                             <div className="button-wrapper flex gap-2.5 mt-8">
-                                <a href="" className="py-2 px-3.5 bg-white text-black">
+                                <Link to="/sound" className="py-2 px-3.5 bg-white text-black">
                                     Sound Test
-                                </a>
-                                <a href="" className="py-2 px-3.5 bg-white text-black">
+                                </Link>
+                                <Link to="/3D" className="py-2 px-3.5 bg-white text-black">
                                     View In 3D
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <img src={imagePath} className="w-full h-1/2 md:w-1/2 md:h-auto" alt="" />

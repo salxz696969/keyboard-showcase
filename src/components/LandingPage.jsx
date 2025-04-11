@@ -2,6 +2,7 @@ import "../index.css"
 import KeyboardCarousel from "./small_components/KeyboardCarousel.jsx";
 import Featured from "./Featured.jsx";
 import Trending from "./Trending.jsx";
+import { Link } from 'react-router-dom';
 
 export default function LandingPage() {
 
@@ -48,8 +49,8 @@ export default function LandingPage() {
                     <p className="text-white text-xl text-center">"Explore Keyboards. Feel the Click. Hear the
                         Sound."</p>
                     <div className="hero-buttons flex gap-2 mt-8">
-                        <a href="" className="py-2 px-3.5  bg-white text-black">Purchase</a>
-                        <a href="" className="py-2 px-3.5  bg-white text-black">Sound Test</a>
+                        <Link to="/purchase" className="py-2 px-3.5  bg-white text-black">Purchase</Link>
+                        <Link to="/sound" className="py-2 px-3.5  bg-white text-black">Sound Test</Link>
                     </div>
                 </div>
                 <KeyboardCarousel isAtRight={true} images={heroImages}></KeyboardCarousel>
