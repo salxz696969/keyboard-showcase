@@ -11,6 +11,11 @@ import SoundPage from "./components/SoundPage";
 import Keyboard3D from "./components/Keyboard3D.jsx";
 import KeyboardViewPage from "./components/KeyboardViewPage.jsx";
 import CartPage from './components/CartPage';
+import image1 from './assets/footer/image1.png'
+import image2 from './assets/footer/image2.png'
+import image3 from './assets/footer/image3.png'
+import image4 from './assets/footer/image4.png'
+import image5 from './assets/footer/image5.png'
 
 function App() {
   const [isScrollingUp, setIsScrollingUp] = useState(true);
@@ -47,7 +52,7 @@ function App() {
     // Lenis init
     const lenis = new Lenis({
       smooth: true,
-      lerp: 0.08,
+      lerp: 0.05,
     });
 
     function raf(time) {
@@ -106,6 +111,100 @@ function App() {
         <Route path="/3D" element={<Keyboard3D/>}/>
         <Route path="/Cart" element={<CartPage/>}/>
       </Routes>
+      
+      {/* ------ Footer ------ */}
+      <div style={{ backgroundColor: "black", padding: "0 20px" , marginTop: "100px"}}>
+        <hr style={{ 
+          borderTop: "1px solid white", 
+          borderBottom: "none",
+          opacity: 0.7
+        }}/>
+      </div>
+
+      <div
+        style={{
+          fontFamily: "Exo 2, sans-serif",
+          display: "grid",
+          gridTemplateColumns: "50% repeat(auto-fit, minmax(150px, 1fr))",
+          gap: "1rem", 
+          color: "white",
+          backgroundColor: "black",
+          padding: "1rem",
+          "@media (max-width: 768px)": {
+            gridTemplateColumns: "1fr",
+            textAlign: "center"
+          }
+        }}
+      >
+        <div
+          style={{
+            marginLeft: "5vw",
+            fontSize: "1.7rem",
+            fontWeight: "bold"
+          }}
+        >
+          <h1>Get updates on your  <br/>favourite keyboard</h1>
+          <p 
+            style={{ margin: "45px 0 0", fontSize: "1rem", fontWeight: "400"}}>We accept:
+            <div
+              style={{ display: "flex", gap: "5px", width: "50px", marginTop: "10px"}}
+            >
+              <img src={image1} alt="apple pay" />
+              <img src={image2} alt="google pay" />
+              <img src={image3} alt="apple pay" />
+              <img src={image4} alt="paypal pay" />
+              <img src={image5} alt="visa pay" />
+            </div>
+          </p>
+        </div>
+
+        <div
+          style={{
+            marginTop: "20px"
+          }}
+        >
+          <h1 style={{ color: "rgb(137, 51, 49)", marginBottom: "10px" }}>SERVICES</h1>
+          <p>Our Stores</p>
+          <p>Campaigns</p>
+          <p>Tournaments</p>
+          <p>Offline</p>
+        </div>
+        <div
+          style={{
+            marginTop: "20px"
+          }}
+        >
+          <h1 style={{ color: "rgb(137, 51, 49)", marginBottom: "10px" }}>ABOUT</h1>
+          <p>Our Story</p>
+          <p>Benefits</p>
+          <p>Teams</p>
+          <p>Careers</p>
+        </div>
+        <div
+          style={{
+            marginTop: "20px"
+          }}
+        >
+          <h1 style={{ color: "rgb(137, 51, 49)", marginBottom: "10px" }}>HELP</h1>
+          <p>FAQs</p>
+          <p>Contact Us</p>
+        </div>
+      </div>
+
+      <div 
+        style={{ 
+          fontFamily: "Exo 2, sans-serif", 
+          backgroundColor: "black", 
+          color: "white",
+          display: "flex", 
+          justifyContent: "center",
+          gap: "100px",
+          padding: "50px 0 50px"
+        }}>
+        <p>Terms & Conditions</p>
+        <p>Privacy Policy</p>
+      </div>
+
     </div>
   );
 }

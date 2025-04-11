@@ -41,7 +41,7 @@ const CartPage = () => {
     <div
       style={{
         display: "flex",
-        backgroundColor: "black",
+        backgroundColor: "#0e0e0e",
         minHeight: "100vh",
         color: "white",
       }}

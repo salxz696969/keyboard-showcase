@@ -9,7 +9,7 @@ const PurchasePage = () => {
       style={{
         minHeight: "100vh",
         width: "100vw",
-        backgroundColor: "black",
+        backgroundColor: "#0e0e0e",
         display: "flex",
         flexDirection: "column",
       }}
