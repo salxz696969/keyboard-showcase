@@ -29,7 +29,7 @@ const PurchaseCard = ({ image, title, price, description }) => {
       }}
     >
       <div style={{ backgroundColor: "#523231", borderRadius: "10px", height:"110px", alignItems:"center", display:"flex" }}>
-        <img src={image} alt="" style={{ width: "100%" }} />
+        <img src={image.picture1} alt="" style={{ width: "100%", objectFit: "contain" }} />
       </div>
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         <p>{title}</p>

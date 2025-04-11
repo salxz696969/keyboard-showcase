@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import {useEffect, useRef, useState} from "react";
 import "../../index.css";
 
-export default function KeyboardCarousel({ images, isAtRight }) {
+export default function KeyboardCarousel({images, isAtRight}) {
     const [imageIndex, setImageIndex] = useState(0);
     const imageRef = useRef();
 
@@ -23,9 +23,7 @@ export default function KeyboardCarousel({ images, isAtRight }) {
 
                 // Let DOM update with new image, then bring it to center
                 requestAnimationFrame(() => {
-                    requestAnimationFrame(() => {
-                        imageEl.classList.remove("translate-x-full", "-translate-x-full");
-                    });
+                    imageEl.classList.remove("translate-x-full", "-translate-x-full");
                 });
             }, 500);
         }, 3000);
@@ -34,7 +32,9 @@ export default function KeyboardCarousel({ images, isAtRight }) {
     }, [images.length, isAtRight]);
 
     return (
-        <div className={`carousel-wrapper hidden md:w-1/4 md:h-full md:flex ${isAtRight ? "md:justify-end" : "md:justify-start"} md:items-center md:overflow-hidden `} data-aos={isAtRight ? "fade-right" : "fade-left"}>
+        <div
+            className={`carousel-wrapper hidden md:w-1/4 md:h-full md:flex ${isAtRight ? "md:justify-end" : "md:justify-start"} md:items-center md:overflow-hidden `}
+            data-aos={isAtRight ? "fade-right" : "fade-left"}>
             <img
                 src={images[imageIndex]}
                 alt={`Keyboard ${imageIndex + 1}`}

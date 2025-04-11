@@ -8,16 +8,17 @@ const KeyboardViewPage = () => {
   if (!state) {
     return <p>No data found. Please go back and select a product.</p>;
   }
-  const handleWriteToCart=(name, price, picture)=>{
-    const temp = JSON.parse(localStorage.getItem("cart"))||[];
-    const itemToAdd={
-      price:price,
-      name:name,
-      picture:picture
-    }
+  const handleWriteToCart = (name, price, picture) => {
+    const temp = JSON.parse(localStorage.getItem("cart")) || [];
+    const itemToAdd = {
+      price: price,
+      name: name,
+      picture: picture,
+    };
     temp.push(itemToAdd);
-    localStorage.setItem("cart", JSON.stringify(temp))
-  }
+    localStorage.setItem("cart", JSON.stringify(temp));
+    window.alert("Added To Cart")
+  };
   return (
     <div
       style={{
@@ -68,7 +69,7 @@ const KeyboardViewPage = () => {
                 src={picture.picture1}
                 alt=""
                 onClick={() => setDisplayPic(picture.picture1)}
-                style={{ width: "100%" }}
+                style={{ width: "100%", objectFit: "contain", cursor:"pointer" }}
               />
             </div>
             <div
@@ -86,7 +87,7 @@ const KeyboardViewPage = () => {
                 src={picture.picture2}
                 alt=""
                 onClick={() => setDisplayPic(picture.picture2)}
-                style={{ width: "100%" }}
+                style={{ width: "100%", objectFit: "contain", cursor:"pointer" }}
               />
             </div>
             <div
@@ -104,7 +105,7 @@ const KeyboardViewPage = () => {
                 src={picture.picture3}
                 alt=""
                 onClick={() => setDisplayPic(picture.picture3)}
-                style={{ width: "100%" }}
+                style={{ width: "100%", objectFit: "contain", cursor:"pointer" }}
               />
             </div>
           </div>
@@ -116,8 +117,15 @@ const KeyboardViewPage = () => {
             width: "150px",
             height: "50px",
             backgroundColor: "white",
+            cursor:"pointer"
           }}
-          onClick={()=>handleWriteToCart(titleAndPrice.title, titleAndPrice.price, picture.picture1)}
+          onClick={() =>
+            handleWriteToCart(
+              titleAndPrice.title,
+              titleAndPrice.price,
+              picture.picture1
+            )
+          }
         >
           Add To Cart
         </button>
@@ -127,21 +135,18 @@ const KeyboardViewPage = () => {
         style={{
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
           width: "50%",
           marginTop: "100px",
         }}
       >
-        <p style={{ color: "white", fontSize: "3rem" }}>
+        <p style={{ color: "#fdabea", fontSize: "3rem", fontWeight:"bold" }}>
           {titleAndPrice.title}
         </p>
         <p
           style={{
             color: "white",
-            fontSize: "2rem",
-            alignSelf: "flex-start",
-            marginLeft: "30px",
-            marginTop: "40px",
+            fontSize: "1.75rem",
+            marginTop: "30px",
             marginBottom: "40px",
           }}
         >{`${titleAndPrice.price}$`}</p>
@@ -150,10 +155,11 @@ const KeyboardViewPage = () => {
             alignSelf: "flex-start",
             color: "white",
             listStyleType: "disc",
+            width:"250px",
           }}
         >
           {description.map((e, i) => {
-            return <li key={i}>{e}</li>;
+            return <li key={i} style={{marginBottom:"10px"}}>{e}</li>;
           })}
         </ul>
       </div>

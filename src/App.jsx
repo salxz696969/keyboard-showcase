@@ -113,7 +113,7 @@ function App() {
       </Routes>
       
       {/* ------ Footer ------ */}
-      <div style={{ backgroundColor: "black", padding: "100px 0 20px" }}>
+      <div style={{ backgroundColor: "black", padding: "0 20px" , marginTop: "100px"}}>
         <hr style={{ 
           borderTop: "1px solid white", 
           borderBottom: "none",

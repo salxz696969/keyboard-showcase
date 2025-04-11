@@ -9,7 +9,7 @@ const PurchasePage = () => {
       style={{
         minHeight: "100vh",
         width: "100vw",
-        backgroundColor: "black",
+        backgroundColor: "#0e0e0e",
         display: "flex",
         flexDirection: "column",
       }}
@@ -34,9 +34,9 @@ const PurchasePage = () => {
           return (
             <PurchaseCard
               image={{
-                picture1:e.picture.picture1,
-                picture2:e.picture.picture2,
-                picture3:e.picture.picture3
+                picture1:e.picture1,
+                picture2:e.picture2,
+                picture3:e.picture3
               }}
               price={e.price}
               title={e.name}
@@ -70,7 +70,11 @@ const PurchasePage = () => {
           return (
             <PurchaseCard
               description={e.description}
-              image={e.picture}
+              image={{
+                picture1:e.picture1,
+                picture2:e.picture2,
+                picture3:e.picture3
+              }}
               price={e.price}
               title={e.name}
               key={i}
@@ -97,7 +101,11 @@ const PurchasePage = () => {
           return (
             <PurchaseCard
               description={e.description}
-              image={e.picture}
+              image={{
+                picture1:e.picture1,
+                picture2:e.picture2,
+                picture3:e.picture3
+              }}
               price={e.price}
               title={e.name}
               key={i}
